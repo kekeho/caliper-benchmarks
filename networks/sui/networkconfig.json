@@ -1,0 +1,12 @@
+{
+    "caliper": {
+        "blockchain": "sui",
+        "command" : {
+        }
+    },
+    "sui": {
+        "url": "https://localhost:9000",
+        "contracts": {
+        }
+    }
+}
