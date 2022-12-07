@@ -21,4 +21,5 @@ RUN rustup update stable
 # install sui
 RUN cargo install --locked --git https://github.com/MystenLabs/sui.git --branch devnet sui
 
-ENTRYPOINT [ "sui" ]
+# copy config
+COPY config/ /root/.sui/sui_config/

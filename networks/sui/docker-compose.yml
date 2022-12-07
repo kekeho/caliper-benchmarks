@@ -1,0 +1,14 @@
+version: '3'
+services:
+  sui:
+    build: .
+    command: sui start --network.config /root/.sui/sui_config/network.yaml
+    ports:
+      - 38633:38633 # node 1 json rpc
+      - 43597:43597 # node 2 json rpc
+      - 44243:44243 # node 3 json rpc
+      - 40919:40919 # node 4 json rpc
+      - 44833:44833 # node 1 metrics
+      - 38049:38049 # node 2 metrics
+      - 46429:46429 # node 3 metrics
+      - 45443:45443 # node 4 metrics
