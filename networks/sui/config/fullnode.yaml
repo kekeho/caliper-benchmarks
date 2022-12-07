@@ -1,0 +1,20 @@
+---
+protocol-key-pair: A+7gTbiThmEfyl8OAwrz9Zsa7lUdEcdp3v/v+Aq+w9WHfznHQ1YOJNhULn8lN8owOLqsDTTLqMgJy9vNT4VV5uOS3Sw6ED5FpxSbH/KuCWQX2j7MCuforfbtG2hGJmnL6CpTd7DOjoFhbcHWKJbqaD99m2iVl2RgMMXzSRnpG2A=
+worker-key-pair: Kj/A9lg1Sp1nd2jduOVfcZr46Hv06KF6SAJtedT2A/NVjMKTz/S48y3aQy50Qoc/VqTUtWwvD7DTY76F5EbOpQ==
+account-key-pair: AP2C13nUMj+zz4RcKhKQFunZolev+1MVCbMojrrRKdarefgFEzu4N0cvMo1QUO9S8niHwBnCXdmkGzgO7MefHmQ=
+network-key-pair: YIUtidu12IFHbyPkIp4FenrLg1YFb2lO63JVFj00FXkxF+PiBPuF7Oa/7ThSr1B2hrcTazVtw0EacRwIWA+E2Q==
+db-path: /root/.sui/sui_config/authorities_db/full_node_db
+network-address: /ip4/127.0.0.1/tcp/32803/http
+json-rpc-address: "0.0.0.0:9000"
+websocket-address: "0.0.0.0:9001"
+metrics-address: "127.0.0.1:45829"
+admin-interface-port: 43969
+enable-event-processing: true
+enable-checkpoint: false
+enable-reconfig: false
+grpc-load-shed: ~
+grpc-concurrency-limit: ~
+p2p-config:
+  listen-address: "127.0.0.1:42699"
+genesis:
+  genesis-file-location: /root/.sui/sui_config/genesis.blob
