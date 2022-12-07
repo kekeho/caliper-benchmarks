@@ -2,10 +2,12 @@
     "caliper": {
         "blockchain": "sui",
         "command" : {
+            "start": "docker-compose -f ./networks/sui/docker-compose.yml up -d && sleep 10",
+            "end": "docker-compose -f ./networks/sui/docker-compose.yml down"
         }
     },
     "sui": {
-        "url": "https://localhost:9000",
+        "url": "https://localhost:38633",
         "contracts": {
         }
     }
