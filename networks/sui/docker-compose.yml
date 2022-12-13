@@ -4,6 +4,7 @@ services:
     build: .
     command: sui start --network.config /root/.sui/sui_config/network.yaml
     ports:
+      - 9000:9000
       - 38633:38633 # node 1 json rpc
       - 43597:43597 # node 2 json rpc
       - 44243:44243 # node 3 json rpc
