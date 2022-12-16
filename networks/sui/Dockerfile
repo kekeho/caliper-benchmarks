@@ -23,3 +23,4 @@ RUN cargo install --locked --git https://github.com/MystenLabs/sui.git --branch 
 
 # copy config
 COPY config/ /root/.sui/sui_config/
+COPY run.sh /

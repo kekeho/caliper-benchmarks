@@ -1,20 +1,157 @@
 ---
-protocol-key-pair: A+7gTbiThmEfyl8OAwrz9Zsa7lUdEcdp3v/v+Aq+w9WHfznHQ1YOJNhULn8lN8owOLqsDTTLqMgJy9vNT4VV5uOS3Sw6ED5FpxSbH/KuCWQX2j7MCuforfbtG2hGJmnL6CpTd7DOjoFhbcHWKJbqaD99m2iVl2RgMMXzSRnpG2A=
-worker-key-pair: Kj/A9lg1Sp1nd2jduOVfcZr46Hv06KF6SAJtedT2A/NVjMKTz/S48y3aQy50Qoc/VqTUtWwvD7DTY76F5EbOpQ==
-account-key-pair: AP2C13nUMj+zz4RcKhKQFunZolev+1MVCbMojrrRKdarefgFEzu4N0cvMo1QUO9S8niHwBnCXdmkGzgO7MefHmQ=
-network-key-pair: YIUtidu12IFHbyPkIp4FenrLg1YFb2lO63JVFj00FXkxF+PiBPuF7Oa/7ThSr1B2hrcTazVtw0EacRwIWA+E2Q==
+protocol-key-pair: J2izX4/U9IwybJ3Xedub+OqsSsf5iBKr0+M6yjNILOyzr/tADGauRe0R/W/oBlCgtIlAangaGZ3A6P+UirVMu7eFSoEN/KTpi0v7IIZi9C8ThkTq+3LEESGJifAvgs9PsSkSdWDTdRxTyr2aWgXTG3YRPBg7Mtp1vsW+nEMtYZY=
+worker-key-pair: o1cMLbteae1VlVX9u/Z9FQfsx17YFwzMJbU5AGChQNK1axor0f50sEcBrX1PP4SMxZYpu/U1qiqtbPoIrchZdA==
+account-key-pair: ADSDUGSoMkxfo/gVBaOlZBEQIVa7C7181voig0Etw0JbsBh3eVcFgnbeKqxjyyx5wo9zO/w6LpMcKwT3KDEpwMk=
+network-key-pair: Zo74/Oble9iYLp02jn5NnxsxWO9RvV8DPmJuyzvFE9DGig7gsVjEQNnxv+Qo4N1et4YyEyOXxMwb0wEbTEwwFg==
 db-path: /root/.sui/sui_config/authorities_db/full_node_db
-network-address: /ip4/127.0.0.1/tcp/32803/http
+network-address: /ip4/127.0.0.1/tcp/41661/http
 json-rpc-address: "0.0.0.0:9000"
-websocket-address: "0.0.0.0:9001"
-metrics-address: "127.0.0.1:45829"
-admin-interface-port: 43969
+metrics-address: "127.0.0.1:41615"
+admin-interface-port: 42195
 enable-event-processing: true
 enable-checkpoint: false
 enable-reconfig: false
 grpc-load-shed: ~
 grpc-concurrency-limit: ~
 p2p-config:
-  listen-address: "127.0.0.1:42699"
+  listen-address: "127.0.0.1:41841"
+  external-address: /ip4/127.0.0.1/udp/41841
+  seed-peers:
+    - peer-id:
+        - 11
+        - 165
+        - 217
+        - 70
+        - 147
+        - 29
+        - 157
+        - 24
+        - 121
+        - 228
+        - 23
+        - 112
+        - 27
+        - 43
+        - 89
+        - 15
+        - 133
+        - 165
+        - 252
+        - 237
+        - 146
+        - 101
+        - 64
+        - 140
+        - 141
+        - 66
+        - 233
+        - 163
+        - 160
+        - 164
+        - 79
+        - 222
+      address: /ip4/127.0.0.1/udp/43321
+    - peer-id:
+        - 81
+        - 83
+        - 168
+        - 216
+        - 11
+        - 71
+        - 92
+        - 176
+        - 92
+        - 70
+        - 184
+        - 123
+        - 126
+        - 12
+        - 20
+        - 19
+        - 35
+        - 248
+        - 240
+        - 92
+        - 136
+        - 2
+        - 135
+        - 136
+        - 118
+        - 32
+        - 64
+        - 81
+        - 103
+        - 24
+        - 96
+        - 57
+      address: /ip4/127.0.0.1/udp/36407
+    - peer-id:
+        - 69
+        - 116
+        - 73
+        - 6
+        - 32
+        - 130
+        - 30
+        - 33
+        - 104
+        - 144
+        - 120
+        - 133
+        - 192
+        - 21
+        - 229
+        - 30
+        - 207
+        - 192
+        - 147
+        - 229
+        - 191
+        - 37
+        - 69
+        - 209
+        - 214
+        - 147
+        - 83
+        - 176
+        - 58
+        - 158
+        - 195
+        - 100
+      address: /ip4/127.0.0.1/udp/37069
+    - peer-id:
+        - 130
+        - 253
+        - 251
+        - 123
+        - 156
+        - 168
+        - 75
+        - 153
+        - 87
+        - 160
+        - 228
+        - 90
+        - 101
+        - 210
+        - 37
+        - 114
+        - 235
+        - 8
+        - 208
+        - 152
+        - 92
+        - 41
+        - 112
+        - 152
+        - 253
+        - 164
+        - 91
+        - 52
+        - 239
+        - 187
+        - 96
+        - 193
+      address: /ip4/127.0.0.1/udp/43791
 genesis:
   genesis-file-location: /root/.sui/sui_config/genesis.blob
