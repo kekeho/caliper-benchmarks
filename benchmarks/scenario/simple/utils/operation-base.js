@@ -16,7 +16,7 @@
 
 const { WorkloadModuleBase } = require('@hyperledger/caliper-core');
 
-const SupportedConnectors = ['ethereum', 'fabric'];
+const SupportedConnectors = ['ethereum', 'fabric', 'sui'];
 
 /**
  * Base class for simple operations.
