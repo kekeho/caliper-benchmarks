@@ -97,6 +97,8 @@ class OperationBase extends WorkloadModuleBase {
                 return this._createFabricConnectorRequest(operation, args);
             case 'ethereum':
                 return this._createEthereumConnectorRequest(operation, args);
+            case 'sui':
+                return this._createSuiConnectorRequest(operation, args)
             default:
                 // this shouldn't happen
                 throw new Error(`Connector type ${this.connectorType} is not supported by the benchmark`);
@@ -136,6 +138,17 @@ class OperationBase extends WorkloadModuleBase {
             args: Object.keys(args).map(k => args[k]),
             readOnly: query
         };
+    }
+
+    _createSuiConnectorRequest(operation, args) {
+        const query = operation === 'query';
+        return {
+            package: 'simple',
+            module: 'account',
+            verb: operation,
+            args: args,
+            readOnly: query
+        }
     }
 }
 
