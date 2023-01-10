@@ -25,6 +25,10 @@
                 "path": "./src/sui/simple/build/simple/bytecode_modules/account.mv",
                 "gasbudget": 1000
             }
+        },
+        "coins": {
+            "numberOfCoins": 400,
+            "eachAmount": 1500
         }
     }
 }
