@@ -3,6 +3,7 @@ module simple::account {
     use std::string::{Self, String};
     use sui::object::UID;
     use sui::tx_context::{Self, TxContext};
+    use sui::table::{Self, Table};
 
     struct Account has key, store {
         id: UID,
@@ -10,18 +11,39 @@ module simple::account {
         amount: u64,
     }
 
-    entry public fun open(name_bytes: vector<u8>, amount: u64, ctx: &mut TxContext) {
+    struct Accounts has key, store {
+        id: UID,
+        accounts: Table<String, Account>,
+    }
+
+    fun init(ctx: &mut TxContext) {
+        let accounts = Accounts {
+            id: sui::object::new(ctx),
+            accounts: table::new(ctx),
+        };
+
+        transfer::transfer(accounts, tx_context::sender(ctx));
+    }
+
+    entry public fun open(accounts: &mut Accounts, name_bytes: vector<u8>, amount: u64, ctx: &mut TxContext) {
+        let name = string::utf8(name_bytes);
         let account = Account {
             id: sui::object::new(ctx),
-            name: string::utf8(name_bytes),
+            name: name,
             amount: amount,
         };
 
-        transfer::transfer(account, tx_context::sender(ctx));
+        table::add(&mut accounts.accounts, name, account);
     }
 
-    entry public fun transfer(acc_from: &mut Account, acc_to: &mut Account, amount: u64) {
-        acc_from.amount = acc_from.amount - amount;
-        acc_to.amount = acc_to.amount + amount;
+    entry public fun transfer(accounts: &mut Accounts, from: vector<u8>, to: vector<u8>, amount: u64) {
+        let fromS = string::utf8(from);
+        let toS = string::utf8(to);
+
+        let fromAccount = table::borrow_mut(&mut accounts.accounts, fromS);
+        fromAccount.amount = fromAccount.amount - amount;
+
+        let toAccount = table::borrow_mut(&mut accounts.accounts, toS);
+        toAccount.amount = toAccount.amount + amount;
     }
 }

@@ -142,11 +142,19 @@ class OperationBase extends WorkloadModuleBase {
 
     _createSuiConnectorRequest(operation, args) {
         const query = operation === 'query';
+
+        let callArgs = [];
+        callArgs.push({
+            createdObject: 0
+        });
+        Object.keys(args).forEach((k) => {
+            callArgs.push(args[k]);
+        })
         return {
             package: 'simple',
             module: 'account',
             verb: operation,
-            args: args,
+            args: callArgs,
             readOnly: query
         }
     }
