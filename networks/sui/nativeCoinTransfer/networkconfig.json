@@ -1,0 +1,30 @@
+{
+    "caliper": {
+        "blockchain": "sui",
+        "command" : {
+            "start": "docker-compose -f ./networks/sui/docker-compose.yml up -d && sleep 15",
+            "end": "docker-compose -f ./networks/sui/docker-compose.yml down"
+        }
+    },
+    "sui": {
+        "url": "http://127.0.0.1:9000",
+        "contractDeployerSeed": [
+            86, 9, 116, 167, 158, 0, 218, 53,
+            238, 190, 60, 178, 192, 70, 41, 67,
+            132, 208, 93, 22, 227, 94, 57, 242,
+            210, 144, 63, 102, 123, 240, 225, 65
+        ],
+        "fromSeed": [
+            86, 9, 116, 167, 158, 0, 218, 53,
+            238, 190, 60, 178, 192, 70, 41, 67,
+            132, 208, 93, 22, 227, 94, 57, 242,
+            210, 144, 63, 102, 123, 240, 225, 65
+        ],
+        "contracts": {
+        },
+        "coins": {
+            "numberOfCoins": 1000,
+            "eachAmount": 200
+        }
+    }
+}

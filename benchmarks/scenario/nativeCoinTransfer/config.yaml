@@ -1,0 +1,21 @@
+args: &args
+  numberOfCoins: &number-of-coins 1000
+
+test:
+  name: nativeCoinTransfer
+  description: >-
+    Benchmark for transferring native tokens
+  workers:
+    number: 1
+  rounds:
+    - label: transfer
+      description: >-
+        Transfer native tokens
+      txNumber: *number-of-coins
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 100
+      workload:
+        module: benchmarks/scenario/nativeCoinTransfer/transfer.js
+        arguments: *args

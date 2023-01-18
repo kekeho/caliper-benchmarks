@@ -1,0 +1,50 @@
+---
+protocol-key-pair: VaPxBsCgeXnebKJTJOoAyZ2R08OKyn7uAT+a2HuqY1mVCfTC0FlSrYvptBufZyQsvip7fmKJhc/2pNFA859CIvQnnOzgVdpi9+xrwhmRBxIXGL2pUAgsOkM/mWAo9VKjDAm3BrrnKaZZ21Ttl2P4G7g3wtb7VBy9ZA4Q1CFi1h8=
+worker-key-pair: LXCUJFtnAZeWAZV5CVSKGPt7BPMmn2Kc6etCAoPFErqFEHfkGQkdE4twjEhXSQA2bCLk7hZOSdE/roYDXABFTg==
+account-key-pair: ALyzcZGh/jbvYHDln7HHtT+Vivy9GeVMBmXWL6VtGuM5ha4XVQrkEh9cN3k6btx/QhsN5cKWsRl7BhsjEFbheFM=
+network-key-pair: ExBkjr6KgAiS2qnh74tqDMt6LsuM8dMOW+g83fTfUiCrndlBQder9bMG1BR/kdnZCO0QI3ctVjPnZUpXBrF+Fg==
+db-path: /root/.sui/sui_config/authorities_db/9509f4c2d05952ad8be9b41b9f67242cbe2a7b7e628985cff6a4d140f39f4222f4279cece055da62f7ec6bc2199107121718bda950082c3a433f996028f552a30c09b706bae729a659db54ed9763f81bb837c2d6fb541cbd640e10d42162d61f
+network-address: /ip4/0.0.0.0/tcp/35089/http
+json-rpc-address: "0.0.0.0:45405"
+metrics-address: "0.0.0.0:43985"
+admin-interface-port: 40463
+consensus-config:
+  address: /ip4/0.0.0.0/tcp/32857/http
+  db-path: /root/.sui/sui_config/consensus_db/9509f4c2d05952ad8be9b41b9f67242cbe2a7b7e628985cff6a4d140f39f4222f4279cece055da62f7ec6bc2199107121718bda950082c3a433f996028f552a30c09b706bae729a659db54ed9763f81bb837c2d6fb541cbd640e10d42162d61f
+  internal-worker-address: ~
+  timeout-secs: 60
+  narwhal-config:
+    header_num_of_batches_threshold: 32
+    max_header_num_of_batches: 1000
+    max_header_delay: 100ms
+    gc_depth: 50
+    sync_retry_delay: 5000ms
+    sync_retry_nodes: 3
+    batch_size: 500000
+    max_batch_delay: 100ms
+    block_synchronizer:
+      range_synchronize_timeout: 30000ms
+      certificates_synchronize_timeout: 30000ms
+      payload_synchronize_timeout: 30000ms
+      payload_availability_timeout: 30000ms
+      handler_certificate_deliver_timeout: 30000ms
+    consensus_api_grpc:
+      socket_addr: /ip4/0.0.0.0/tcp/45859/http
+      get_collections_timeout: 5000ms
+      remove_collections_timeout: 5000ms
+    max_concurrent_requests: 500000
+    prometheus_metrics:
+      socket_addr: /ip4/0.0.0.0/tcp/44757/http
+    network_admin_server:
+      primary_network_admin_server_port: 35455
+      worker_network_admin_server_base_port: 33961
+enable-event-processing: false
+enable-checkpoint: false
+enable-reconfig: false
+grpc-load-shed: ~
+grpc-concurrency-limit: 20000000000
+p2p-config:
+  listen-address: "0.0.0.0:39035"
+  external-address: /ip4/0.0.0.0/udp/39035
+genesis:
+  genesis-file-location: /root/.sui/sui_config/genesis.blob

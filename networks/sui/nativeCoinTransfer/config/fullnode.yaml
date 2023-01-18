@@ -1,0 +1,29 @@
+---
+protocol-key-pair: cbM1ip1U9z5D7zhkEHBkP4ARVYOYs+n4JYnIpVnHCbSFhwvVnOj9ZS5e+MiUT+GU5CtJ2Bsg693j4EFjhe6zWVUK/uxlEPDvUlgT4Fn60nsVgsjtj4uCTzKk28y0InX725R2iRWMH0uScUCI2JLRWrR8+9nHs8UUXr3s5dMoNJ4=
+worker-key-pair: E3TZtkk+hhEKNQgEfR8AIGUovBJZmTD+hcFLc5AsVRQe4i4LwZfXc9wwnz+vAFXGOyaZ4uw2NdpJNL7Iw0n23Q==
+account-key-pair: ALQ+/kx3Unj1+N06S6WPFt5Ua1N7ls1ppN3g/S/RW+JkzOmh4JEuLom+zqsi6y0VT4jjM7InR0pMgMGYWKaVg2s=
+network-key-pair: C1YSZbAJa0TDRZk14QVzfwYeE3DRc07wgMJb5VMQv/pKLR90uHA3fTLQyQtpnIkeS7LwzLB1graNP8Tk1386Hg==
+db-path: /root/.sui/sui_config/authorities_db/full_node_db
+network-address: /ip4/0.0.0.0/tcp/38623/http
+json-rpc-address: "0.0.0.0:9000"
+metrics-address: "0.0.0.0:40439"
+admin-interface-port: 36573
+enable-event-processing: true
+enable-checkpoint: false
+enable-reconfig: false
+grpc-load-shed: ~
+grpc-concurrency-limit: ~
+p2p-config:
+  listen-address: "0.0.0.0:46681"
+  external-address: /ip4/0.0.0.0/udp/46681
+  seed-peers:
+    - peer-id: 6d92b6d002e9a209620c0d300fb191bd67319db3c0999784ad3600c14e82009a
+      address: /ip4/0.0.0.0/udp/39345
+    - peer-id: bb4c0d9fca2d229ae11df2cfa20acd57010175247f78a0b6d12ea04d3371ef65
+      address: /ip4/0.0.0.0/udp/41975
+    - peer-id: 1c5d34169d58454fc844943001cb33730e6d8161b4858144fa4d22ac0f16fcb4
+      address: /ip4/0.0.0.0/udp/41139
+    - peer-id: ab9dd94141d7abf5b306d4147f91d9d908ed1023772d5633e7654a5706b17e16
+      address: /ip4/0.0.0.0/udp/39035
+genesis:
+  genesis-file-location: /root/.sui/sui_config/genesis.blob
