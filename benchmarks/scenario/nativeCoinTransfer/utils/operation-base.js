@@ -104,6 +104,7 @@ class OperationBase extends WorkloadModuleBase {
         return {
             paySui: true,
             amount: 10,
+            recipient: "0x02b9c128cb0b40ddd026752318f217c450b264a0",  // Unknown address (to burn)
         }
     }
 }
